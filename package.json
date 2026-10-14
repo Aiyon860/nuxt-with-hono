@@ -1,0 +1,31 @@
+{
+  "name": "sistem-manajemen-kbe-fabrikasi",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n nuxt,api \"nuxt dev\" \"tsx watch server/node.ts\"",
+    "build": "nuxt generate",
+    "deploy": "wrangler deploy",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.4",
+    "hono": "^4.13.13",
+    "nuxt": "^4.5.2",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261014.1",
+    "@hono/node-server": "^2.1.5",
+    "@types/node": "^26.6.5",
+    "concurrently": "^10.0.6",
+    "drizzle-kit": "^0.31.11",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.151.0"
+  }
+}

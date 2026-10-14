@@ -1,0 +1,14 @@
+{
+  "name": "sistem-manajemen-kbe-fabrikasi",
+  "main": "server/index.ts",
+  "compatibility_date": "2026-01-01",
+  "assets": {
+    "directory": ".output/public",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "kbe-fabrikasi", "database_id": "REPLACE_ME", "migrations_dir": "migrations" }
+  ],
+  "r2_buckets": [{ "binding": "BUCKET", "bucket_name": "kbe-fabrikasi" }]
+}

@@ -1,0 +1,8 @@
+node_modules
+.nuxt
+.output
+.wrangler
+.dev.vars
+dist
+.agents
+.claude
